@@ -1,0 +1,17 @@
+set guioptions vh
+set font "MesloLGS NF Regular 11"
+
+map <Space> navigate next
+map <S-Space> navigate previous
+map w feedkeys ":bmark auto<Return>"
+
+set default-bg "#1f1f1f"
+set statusbar-bg "#1f2430"
+set inputbar-bg "#1f2430"
+set completion-highlight-bg "#BBE67E"
+
+set default-fg "#cbccc6"
+set statusbar-fg "#cbccc6"
+set inputbar-fg "#cbccc6"
+
+set statusbar-basename true

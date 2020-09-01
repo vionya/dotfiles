@@ -1,0 +1,60 @@
+@import "../colours.rasi"
+
+* {
+    background-color: @tr;
+    font: "feather 48";
+}
+
+#window {
+    transparency: "real";
+    anchor: east;
+    background-color: @base;
+    x-offset: -1%;
+    location: east;
+    border-radius: 5;
+    width: 4.25%;
+}
+
+#inputbar {
+    enabled: false;
+    children: [prompt];
+}
+
+#listview {
+    lines: 6;
+    dynamic: true;
+    fixed-height: false;
+}
+
+#element {
+    background-color: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 4 0 0 4;
+}
+
+#element.normal.normal {
+    background-color: @tr;
+}
+
+#element.normal.urgent {
+    background-color: @light-red;
+}
+
+#element.normal.active {
+    background-color: @light-green;
+}
+
+#element.selected.normal {
+    background-color: @light-purple;
+}
+
+#element.selected.urgent {
+    background-color: @light-purple;
+}
+
+#element.selected.active {
+    background-color: @light-purple;
+}
+
+/* vim:ft=css

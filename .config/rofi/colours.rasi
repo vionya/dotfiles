@@ -1,0 +1,12 @@
+configuration {
+    fake-transparency: false;
+}
+
+* {
+    light-purple: rgba(162, 155, 254, 50%);
+    bg: #263238;
+    base: #1f1f1fc9;
+    tr: #00000000;
+    light-green: rgba(19, 55, 35, 50%);
+    light-red: rgba(77, 31, 37, 50%);
+}

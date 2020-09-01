@@ -1,0 +1,62 @@
+configuration {
+    show-icons: true;
+    window-format: "{t:20}";
+    fake-transparency: false;
+}
+
+@import "../colours.rasi"
+
+* {
+    background-color: @tr;
+    font: "feather 12";
+}
+
+window {
+    transparency: "real";
+    background-color: @tr;
+}
+
+mainbox {
+    children: [ listview ];
+    padding: 0%; //0% 0% 0% 0%;
+    background-color: @base;
+    border-radius: 5;
+}
+
+listview {
+    columns: 4;
+    padding: 8;
+    lines: 2;
+    spacing: 10;
+    dynamic: true;
+}
+
+element {
+    orientation: vertical;
+    padding: 15 0 15 0;
+    border-radius: 5;
+    background-color: @bg;
+}
+
+element-text {
+    vertical-align: 1;
+    horizontal-align: 0.5;
+}
+
+element-icon {
+    size: 5%;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+#element.selected.normal {
+    background-color: @light-purple;
+}
+
+#element.selected.urgent {
+    background-color: @light-purple;
+}
+
+#element.selected.active {
+    background-color: @light-purple;
+}
