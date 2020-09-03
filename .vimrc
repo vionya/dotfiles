@@ -7,8 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'hugolgst/vimsence'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'pangloss/vim-javascript'
-Plugin 'arcticicestudio/nord-vim'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()
@@ -62,3 +61,6 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+
+set hlsearch
+set ignorecase
