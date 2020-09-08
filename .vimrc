@@ -50,7 +50,6 @@ function! AirlineInit()
     let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
 endfunction
 autocmd VimEnter * call AirlineInit()
-let g:airline_section_b = '%{strftime("%H:%M")}'
 let g:airline#extensions#tabline#enabled = 1
 
 " Unmap arrow keys
