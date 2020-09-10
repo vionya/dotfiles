@@ -211,4 +211,5 @@ exec --no-startup-id sh ~/.fehbg
 exec --no-startup-id dunst &
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id flameshot &
-exec_always --no-startup-id $HOME/.config/polybar/custom/launch.sh
+exec --no-startup-id ~/bin/mal-server &
+exec_always --no-startup-id ~/.config/polybar/custom/launch.sh
