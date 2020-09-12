@@ -1,6 +1,6 @@
 A collection of my configuration files that I use for my Linux system.
 
-#Software Used
+# Software Used
 * **Terminal Emulator** Kitty
 * **Notification Daemon** dunst
 * **Window Manager** i3-gaps
@@ -8,7 +8,7 @@ A collection of my configuration files that I use for my Linux system.
 * **Menus/Launchers** rofi
 * **Bar** polybar
 
-#Additional Software
+# Additional Software
 * **Document Reader/Viewer** zathura
 
 screenshots or something: todo
