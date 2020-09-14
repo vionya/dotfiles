@@ -194,7 +194,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Border stuff
-for_window [class=".*"] border pixel 2.5
+for_window [class=".*"] border pixel 2
 client.focused          #9a9a9a #000000 #ffffff #d4d4d4 #9a9a9a
 client.unfocused        #000000 #000000 #ffffff #747474 #000000
 client.focused_inactive #000000 #000000 #ffffff #747474 #000000

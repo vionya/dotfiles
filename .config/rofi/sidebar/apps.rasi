@@ -51,15 +51,15 @@ element-icon {
 }
 
 element.selected.normal {
-    background-color: @light-purple;
+    background-color: @light-purple-solid;
 }
 
 element.selected.urgent {
-    background-color: @light-purple;
+    background-color: @light-purple-solid;
 }
 
 element.selected.active {
-    background-color: @light-purple;
+    background-color: @light-purple-solid;
 }
 
 inputbar {

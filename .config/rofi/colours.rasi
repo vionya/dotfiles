@@ -4,6 +4,7 @@ configuration {
 
 * {
     light-purple: rgba(162, 155, 254, 50%);
+    light-purple-solid: rgba(162, 155, 254);
     bg: #263238;
     base: #1f1f1fc9;
     tr: #00000000;
