@@ -200,6 +200,8 @@ client.unfocused        #000000 #000000 #ffffff #747474 #000000
 client.focused_inactive #000000 #000000 #ffffff #747474 #000000
 
 for_window [class="flameshot"] floating enable
+for_window [class="Uim-pref-gtk3"] floating enable
+for_window [class="Uim-im-switcher-gtk3"] floating enable
 
 # allow quick area screenshotting
 bindsym $mod+Shift+Print exec --no-startup-id flameshot gui

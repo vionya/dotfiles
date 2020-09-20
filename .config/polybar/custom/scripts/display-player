@@ -4,7 +4,7 @@ curStatus=$(playerctl status --player spotify)
 npCommand="playerctl metadata --player spotify -f {{title}}"
 
 if [[ "$curStatus" = "Playing" || "$curStatus" = "Paused" ]]; then
-    echo $($npCommand) | cut -c 1-40
+    echo $($npCommand) | cut -c 1-50
 else
     echo "Spotify not running"
 fi

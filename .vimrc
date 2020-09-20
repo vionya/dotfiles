@@ -14,6 +14,8 @@ Plugin 'ayu-theme/ayu-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,3 +66,7 @@ inoremap <Right> <Nop>
 set hlsearch
 set ignorecase
 set incsearch
+
+" Fix issues with vim being weird with
+" background colour in kitty
+let &t_ut=''
