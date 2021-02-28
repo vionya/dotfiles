@@ -52,6 +52,10 @@ set noshowmode
 let g:airline_theme='ayu_mirage'
 let g:airline#extensions#tabline#enabled = 1
 
+" Remap <C-{arrow key}> to move around tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 " Unmap arrow keys
 noremap <Up> <Nop>
 noremap <Down> <Nop>
