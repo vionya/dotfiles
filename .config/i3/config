@@ -207,8 +207,8 @@ for_window [class="Uim-im-switcher-gtk3"] floating enable
 bindsym $mod+Shift+Print exec --no-startup-id flameshot gui
 
 # bind the brightness keys
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight + 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10
 
 exec --no-startup-id picom -b
 exec --no-startup-id sh ~/.fehbg

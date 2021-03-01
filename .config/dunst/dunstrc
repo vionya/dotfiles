@@ -9,8 +9,8 @@ monitor = 0
 transparency = 0
 padding = 10
 horizontal_padding = 15
-frame_width = 2
-frame_color = "#9a9a9a"
+#frame_width = 2
+#frame_color = "#9a9a9a"
 corner_radius = 5
 
 line_height = 0
@@ -19,7 +19,7 @@ alignment = left
 stack_duplicates = false
 
 markup = full
-format = <b>%a</b>\n%s\n%b\n
+format = <b>%a</b>\n%s\n%b\n%p\n
 icon_position = left
 max_icon_size = 75
 min_icon_size = 50
@@ -31,12 +31,12 @@ foreground = "#ffffff"
 
 [urgency_normal]
 timeout = 6
-background = "#1f1f1fc9"
+background = "#a29bfe78"
 foreground = "#ffffff"
 
 [urgency_critical]
 timeout = 0
-background = "#1f1f1fc9"
+background = "#a29bfec9"
 foreground = "#ffffff"
 
 # vim: ft=cfg

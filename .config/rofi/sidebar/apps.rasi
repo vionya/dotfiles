@@ -79,3 +79,5 @@ entry {
 prompt {
     enabled: false;
 }
+
+/* vim:ft=css
