@@ -4,8 +4,9 @@ rofi_command="rofi -theme ~/.config/rofi/sidebar/launcher.rasi"
 incr=""
 mid=""
 decr=""
+custom=""
 
-options="$incr\n$mid\n$decr"
+options="$incr\n$mid\n$decr\n$custom"
 
 choice="$(echo -e "$options" | $rofi_command -dmenu -selected-row $1)"
 
@@ -18,5 +19,9 @@ case $choice in
         ;;
     $decr)
         xbacklight -dec 10 && sh ~/.config/rofi/sidebar/scripts/backlight.sh 2
+        ;;
+    $custom)
+        value=$(echo "" | rofi -theme ~/.config/rofi/text_input.rasi -dmenu -p "Backlight %:")
+        xbacklight -set $value
         ;;
 esac

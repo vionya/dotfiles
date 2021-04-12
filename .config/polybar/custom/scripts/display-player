@@ -1,10 +1,15 @@
 #!/usr/bin/sh
 
-curStatus=$(playerctl status --player spotify)
-npCommand="playerctl metadata --player spotify -f {{title}}"
+curStatus=$(playerctl status --player $(~/bin/get-active-player))
+npCommand="playerctl metadata --player $(~/bin/get-active-player) -f {{title}}"
 
 if [[ "$curStatus" = "Playing" || "$curStatus" = "Paused" ]]; then
-    echo $($npCommand) | cut -c 1-50
+    if [ "$($npCommand)" ]; then
+        nowPlaying=$(${npCommand} | cut -c 1-50 | iconv -f utf-8 -t utf-8 -c) # We use iconv here to strip non UTF-8 characters from the string, so that it doesn't crash polybar
+    else
+        nowPlaying="Untitled"
+    fi
 else
-    echo "Spotify not running"
+    nowPlaying="Nothing playing"
 fi
+echo "$nowPlaying"

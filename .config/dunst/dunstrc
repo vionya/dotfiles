@@ -11,7 +11,7 @@ padding = 10
 horizontal_padding = 15
 #frame_width = 2
 #frame_color = "#9a9a9a"
-corner_radius = 5
+corner_radius = 3
 
 line_height = 0
 alignment = left

@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-curStatus=$(playerctl status --player spotify)
+curStatus=$(playerctl status --player $(~/bin/get-active-player))
 
 if [[ "$curStatus" = "Playing" || "$curStatus" = "Paused" ]]; then
     if [[ "$curStatus" = "Paused" ]]; then
