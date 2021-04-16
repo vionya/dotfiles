@@ -1,0 +1,78 @@
+configuration {
+    show-icons: true;
+    display-drun: "";
+    fake-transparency: false;
+    bw: 0;
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    sidebar-mode: false;
+}
+
+@import "./colours.rasi"
+
+* {
+    background-color: @tr;
+    font: "FantasqueSansMono Nerd Font 14";
+}
+
+window {
+    transparency: "real";
+    anchor: center;
+    location: center;
+    width: 40%;
+    border: 0;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    padding: 0% 0% 0% 0%;
+    background-color: @base;
+    border-radius: 5;
+}
+
+listview {
+    padding: 8;
+    spacing: 10;
+    lines: 10;
+    fixed-height: false;
+}
+
+element {
+    padding: 0;
+    border-radius: 5;
+    background-color: @bg;
+    text-color: white;
+    padding: 6;
+}
+
+element.selected.normal {
+    background-color: @light-purple-solid;
+}
+
+element.selected.urgent {
+    background-color: @light-purple-solid;
+}
+
+element.selected.active {
+    background-color: @light-purple-solid;
+}
+
+inputbar {
+    background-color: @bg;
+    padding: 4;
+    border-radius: 5px;
+    children: [entry];
+    margin: 1% 0.5%;
+}
+
+entry {
+    font: "FantasqueSansMono Nerd Font 12";
+    text-color: white;
+    padding: 8 12 8 12;
+}
+
+prompt {
+    enabled: false;
+}
+
+/* vim:ft=css
