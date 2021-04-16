@@ -2,7 +2,7 @@
 idle_threshold = 120
 show_age_threshold = 10
 follow = mouse
-geometry = "350x6-30+40"
+geometry = "500x6-30+40"
 shrink = yes
 monitor = 0
 

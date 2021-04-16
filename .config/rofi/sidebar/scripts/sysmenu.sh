@@ -3,9 +3,10 @@ rofi_command="rofi -theme ~/.config/rofi/sidebar/launcher.rasi"
 
 exitwm=""
 reboot=""
+_suspend=""
 shutdown=""
 
-options="$exitwm\n$reboot\n$shutdown"
+options="$exitwm\n$reboot\n$_suspend\n$shutdown"
 
 choice="$(echo -e "$options" | $rofi_command -dmenu)"
 
@@ -15,6 +16,9 @@ case $choice in
         ;;
     $reboot)
         reboot
+        ;;
+    $_suspend)
+        systemctl suspend
         ;;
     $shutdown)
         shutdown 0
