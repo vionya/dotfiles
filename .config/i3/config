@@ -205,6 +205,9 @@ for_window [class="Uim-im-switcher-gtk3"] floating enable
 
 # allow quick area screenshotting
 bindsym $mod+Shift+S exec --no-startup-id flameshot gui
+# allow region selected gif recording
+bindsym $mod+Print exec --no-startup-id $HOME/bin/region-gif-capture
+bindsym $mod+Shift+Print exec --no-startup-id killall ffmpeg
 
 # bind the brightness keys
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight + 10
