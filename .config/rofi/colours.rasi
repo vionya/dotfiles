@@ -1,7 +1,3 @@
-configuration {
-    fake-transparency: false;
-}
-
 * {
     light-purple: rgba(162, 155, 254, 50%);
     light-purple-solid: rgba(162, 155, 254);
@@ -11,3 +7,5 @@ configuration {
     light-green: rgba(19, 55, 35, 50%);
     light-red: rgba(77, 31, 37, 50%);
 }
+
+/* vim:ft=css

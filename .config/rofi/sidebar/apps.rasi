@@ -1,11 +1,7 @@
 configuration {
     show-icons: true;
     display-drun: "";
-    fake-transparency: false;
-    bw: 0;
     drun-display-format: "{icon}";
-    location: 0;
-    sidebar-mode: false;
 }
 
 @import "../colours.rasi"
@@ -22,7 +18,6 @@ window {
     x-offset: -1%;
     width: 20%;
     height: 42%;
-    border: 0;
 }
 
 mainbox {
@@ -50,15 +45,7 @@ element-icon {
     padding: 25 0 25 25;
 }
 
-element.selected.normal {
-    background-color: @light-purple-solid;
-}
-
-element.selected.urgent {
-    background-color: @light-purple-solid;
-}
-
-element.selected.active {
+element.selected {
     background-color: @light-purple-solid;
 }
 
@@ -78,6 +65,7 @@ entry {
 
 case-indicator {
     margin: 2 10 0 0;
+    text-color: white;
 }
 
 prompt {

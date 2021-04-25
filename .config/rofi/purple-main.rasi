@@ -45,6 +45,10 @@ element {
     padding: 6;
 }
 
+element-text {
+    highlight: none;
+}
+
 element.selected.normal {
     background-color: @light-purple-solid;
 }
@@ -73,6 +77,7 @@ entry {
 
 case-indicator {
     margin: 5 10 0 0;
+    text-color: white;
 }
 
 prompt {

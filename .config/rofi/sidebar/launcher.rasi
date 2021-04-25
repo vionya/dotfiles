@@ -5,55 +5,34 @@
     font: "feather 48";
 }
 
-#window {
+window {
     transparency: "real";
     anchor: east;
-    background-color: @base;
-    x-offset: -1%;
     location: east;
+    padding: 5;
+    background-color: @base;
     border-radius: 5;
+    x-offset: -1%;
     width: 4.25%;
 }
 
-#inputbar {
+inputbar {
     enabled: false;
-    children: [prompt];
 }
 
-#listview {
-    lines: 6;
+listview {
     dynamic: true;
     fixed-height: false;
 }
 
-#element {
-    background-color: none;
+element {
     text-align: center;
     border-radius: 5px;
     padding: 4 0 0 4;
+    text-color: white;
 }
 
-#element.normal.normal {
-    background-color: @tr;
-}
-
-#element.normal.urgent {
-    background-color: @light-red;
-}
-
-#element.normal.active {
-    background-color: @light-green;
-}
-
-#element.selected.normal {
-    background-color: @light-purple;
-}
-
-#element.selected.urgent {
-    background-color: @light-purple;
-}
-
-#element.selected.active {
+element.selected {
     background-color: @light-purple;
 }
 
