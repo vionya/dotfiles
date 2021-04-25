@@ -66,7 +66,7 @@ inputbar {
     background-color: @bg;
     padding: 4;
     border-radius: 5px;
-    children: [entry];
+    children: [entry, case-indicator];
     margin: 1% 0.5%;
 }
 
@@ -74,6 +74,10 @@ entry {
     font: "FantasqueSansMono Nerd Font 12";
     text-color: white;
     padding: 8 12 8 12;
+}
+
+case-indicator {
+    margin: 2 10 0 0;
 }
 
 prompt {
