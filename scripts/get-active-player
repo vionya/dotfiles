@@ -1,0 +1,17 @@
+#!/usr/bin/sh
+
+activePlayers=()
+
+for player in $(playerctl -l); do
+    if [[ "$(playerctl status --player $player)" != "Stopped" ]]; then
+        activePlayers+=($player)
+    fi
+done
+
+for player in ${activePlayers[@]}; do
+    if [[ "$(playerctl status --player $player)" = "Playing" ]]; then
+        break
+    fi
+done
+
+echo $player
