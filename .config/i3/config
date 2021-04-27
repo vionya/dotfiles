@@ -72,7 +72,7 @@ bindsym $mod+Shift+Print exec --no-startup-id killall ffmpeg
 # ## Open a window to quickly copy a unicode character to the clipboard ##
 bindsym $mod+Shift+U exec --no-startup-id kitty --class "kitty-unicode-xclip" sh -c "kitty +kitten unicode_input | tr -d '\n' | xsel -ib"
 
-# Shows a dmenu list with help for keybinds
+# ## Shows a dmenu list with help for keybinds ##
 bindsym $mod+Shift+H exec --no-startup-id $HOME/bin/i3-keybinds-help | rofi -dmenu -i -markup-rows -p "Keybind Help"
 
 
@@ -195,8 +195,7 @@ exec --no-startup-id xset -dpms s off
 exec --no-startup-id flameshot &
 
 # Start a script to facilitate MPRIS player Discord rich presences
-exec --no-startup-id python ~/Documents/projects/mpris-discord-rich-presence/main.py --auto
+exec --no-startup-id python -m mpris_rich_presence --auto
 
 # Start polybar
 exec_always --no-startup-id ~/.config/polybar/custom/launch.sh
-
