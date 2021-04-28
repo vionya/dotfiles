@@ -9,9 +9,9 @@ monitor = 0
 transparency = 0
 padding = 10
 horizontal_padding = 15
-#frame_width = 2
-#frame_color = "#9a9a9a"
-corner_radius = 3
+frame_width = 7.5
+frame_color = "#1f1f1fc9"
+corner_radius = 5
 
 line_height = 0
 alignment = left
@@ -24,6 +24,10 @@ icon_position = left
 max_icon_size = 75
 min_icon_size = 50
 
+mouse_right_click = close_current
+mouse_left_click = do_action
+mouse_middle_click = close_all
+
 [urgency_low]
 timeout = 3
 background = "#1f1f1fc9"
@@ -31,7 +35,7 @@ foreground = "#ffffff"
 
 [urgency_normal]
 timeout = 6
-background = "#a29bfe78"
+background = "#263238"
 foreground = "#ffffff"
 
 [urgency_critical]
