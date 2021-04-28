@@ -17,7 +17,6 @@ window {
     location: east;
     x-offset: -1%;
     width: 20%;
-    height: 42%;
 }
 
 mainbox {
@@ -31,6 +30,9 @@ listview {
     columns: 3;
     padding: 8;
     spacing: 10;
+    lines: 5;
+    dynamic: true;
+    fixed-height: false;
 }
 
 element {
