@@ -6,7 +6,10 @@ full=""
 
 options="$gui\n$full"
 
-choice="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
+columns=$(echo -e $options | wc -l)
+width=$(( $columns * 5 ))
+
+choice="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -columns $columns -width $width)"
 
 case $choice in
     $gui)

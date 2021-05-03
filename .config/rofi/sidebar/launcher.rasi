@@ -1,4 +1,4 @@
-@import "../colours.rasi"
+@import "../colors.rasi"
 
 * {
     background-color: @tr;
@@ -7,13 +7,12 @@
 
 window {
     transparency: "real";
-    anchor: east;
-    location: east;
+    anchor: south;
+    location: south;
     padding: 10;
     background-color: @base;
     border-radius: 5;
-    x-offset: -1%;
-    width: 5%;
+    y-offset: -5%;
 }
 
 inputbar {
@@ -21,21 +20,25 @@ inputbar {
 }
 
 listview {
+    cycle: true;
     dynamic: true;
+    lines: 1;
     fixed-height: false;
     spacing: 10;
 }
 
 element {
     background-color: @bg;
-    text-align: center;
+    vertical-align: center;
+    horizontal-align: center;
     border-radius: 5px;
-    padding: 4 0 0 6;
+    padding: 9 0 0 9;
     text-color: white;
 }
 
 element.selected {
     background-color: @light-purple-solid;
+    text-color: @bg;
 }
 
 /* vim:ft=css

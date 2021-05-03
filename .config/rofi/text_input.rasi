@@ -8,7 +8,7 @@ configuration {
     sidebar-mode: false;
 }
 
-@import "./colours.rasi"
+@import "./colors.rasi"
 
 * {
     background-color: @tr;

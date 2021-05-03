@@ -9,10 +9,14 @@ sys=""
 # Variable passed to rofi
 options="$launcher\n$adjusters\n$sys"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
+columns=$(echo -e $options | wc -l)
+width=$(( $columns * 5 ))
+
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -columns $columns -width $width)"
 case $chosen in
     $launcher)
-        rofi -theme ~/.config/rofi/sidebar/apps.rasi -modi drun -show drun
+        rofi -theme ~/.config/rofi/sidebar/apps_south.rasi -modi drun -show drun
+        # rofi -modi drun -show drun
         ;;
     $adjusters)
         sh ~/.config/rofi/sidebar/scripts/adjusters.sh

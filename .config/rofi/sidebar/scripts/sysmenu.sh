@@ -8,7 +8,10 @@ shutdown=""
 
 options="$exitwm\n$reboot\n$_suspend\n$shutdown"
 
-choice="$(echo -e "$options" | $rofi_command -dmenu)"
+columns=$(echo -e $options | wc -l)
+width=$(( $columns * 5 ))
+
+choice="$(echo -e "$options" | $rofi_command -dmenu -columns $columns -width $width)"
 
 case $choice in
     $exitwm)

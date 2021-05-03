@@ -1,6 +1,5 @@
 configuration {
     show-icons: true;
-    display-drun: "";
     fake-transparency: false;
     bw: 0;
     drun-display-format: "{icon} {name}";
@@ -8,7 +7,7 @@ configuration {
     sidebar-mode: false;
 }
 
-@import "./colours.rasi"
+@import "./colors.rasi"
 
 * {
     background-color: @tr;
@@ -24,7 +23,7 @@ window {
 }
 
 mainbox {
-    children: [ inputbar, listview ];
+    children: [ inputbar, listview, mode-switcher ];
     padding: 0% 0% 0% 0%;
     background-color: @base;
     border-radius: 5;
@@ -38,7 +37,6 @@ listview {
 }
 
 element {
-    padding: 0;
     border-radius: 5;
     background-color: @bg;
     text-color: white;
@@ -51,14 +49,17 @@ element-text {
 
 element.selected.normal {
     background-color: @light-purple-solid;
+    text-color: @bg;
 }
 
 element.selected.urgent {
     background-color: @light-purple-solid;
+    text-color: @bg;
 }
 
 element.selected.active {
     background-color: @light-purple-solid;
+    text-color: @bg;
 }
 
 inputbar {
@@ -85,6 +86,23 @@ prompt {
     font: "FantasqueSansMono Nerd Font 12";
     text-color: @light-purple-solid;
     padding: 8 0 8 12;
+}
+
+mode-switcher {
+    padding: 8 12 8 12;
+    spacing: 10;
+}
+
+button {
+    text-color: white;
+    background-color: @bg;
+    border-radius: 5;
+    padding: 6;
+}
+
+button selected {
+    background-color: @light-purple-solid;
+    text-color: @bg;
 }
 
 /* vim:ft=css

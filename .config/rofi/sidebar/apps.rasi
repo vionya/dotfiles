@@ -4,7 +4,7 @@ configuration {
     drun-display-format: "{icon}";
 }
 
-@import "../colours.rasi"
+@import "../colors.rasi"
 
 * {
     background-color: @tr;
@@ -16,27 +16,27 @@ window {
     anchor: east;
     location: east;
     x-offset: -1%;
-    width: 20%;
+    width: 15%;
 }
 
 mainbox {
     children: [ inputbar, listview ];
-    padding: 0% 0% 0% 0%;
     background-color: @base;
+    padding: 8;
     border-radius: 5;
+    spacing: 10;
 }
 
 listview {
     columns: 3;
-    padding: 8;
     spacing: 10;
-    lines: 5;
+    lines: 3;
     dynamic: true;
     fixed-height: false;
+    fixed-columns: true;
 }
 
 element {
-    padding: 0;
     border: 0;
     border-radius: 5;
     background-color: @bg;
@@ -44,7 +44,7 @@ element {
 
 element-icon {
     size: 60;
-    padding: 25 0 25 25;
+    padding: 12;
 }
 
 element.selected {
@@ -53,10 +53,8 @@ element.selected {
 
 inputbar {
     background-color: @bg;
-    padding: 4;
     border-radius: 5px;
-    children: [entry, case-indicator];
-    margin: 1% 0.5%;
+    children: [ entry, case-indicator ];
 }
 
 entry {

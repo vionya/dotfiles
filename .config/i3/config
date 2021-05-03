@@ -57,11 +57,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # ## Open the system menu sidebar ##
 bindsym $mod+space exec --no-startup-id $HOME/.config/rofi/sidebar/scripts/launch.sh
 
-# Really bad alt-tab implementation
-bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme $HOME/.config/rofi/winswitcher/switcher.rasi -modi window -window-thumbnail -show-icons
+# ## Menu for switching between active windows ##
+bindsym $mod+Tab exec --no-startup-id rofi -show window -modi window -show-icons
 
 # ## Launch Flameshot in GUI mode for screenshotting ##
-bindsym $mod+Shift+S exec --no-startup-id flameshot gui
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 
 # ## Record a region of the screen as a GIF ##
 bindsym $mod+Print exec --no-startup-id $HOME/bin/region-gif-capture
@@ -70,10 +70,10 @@ bindsym $mod+Print exec --no-startup-id $HOME/bin/region-gif-capture
 bindsym $mod+Shift+Print exec --no-startup-id killall ffmpeg
 
 # ## Open a window to quickly copy a unicode character to the clipboard ##
-bindsym $mod+Shift+U exec --no-startup-id kitty --class "kitty-unicode-xclip" sh -c "kitty +kitten unicode_input | tr -d '\n' | xsel -ib"
+bindsym $mod+Shift+u exec --no-startup-id kitty --class "kitty-unicode-xclip" sh -c "kitty +kitten unicode_input | tr -d '\n' | xsel -ib"
 
 # ## Shows a dmenu list with help for keybinds ##
-bindsym $mod+Shift+H exec --no-startup-id $HOME/bin/i3-keybinds-help | rofi -dmenu -i -markup-rows -p "Keybind Help"
+bindsym $mod+Shift+h exec --no-startup-id $HOME/bin/i3-keybinds-help | rofi -dmenu -i -markup-rows -p "Keybind Help"
 
 
 # -- LAYOUT CONTROL --

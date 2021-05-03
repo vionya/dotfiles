@@ -7,7 +7,10 @@ volume=""
 # Variable passed to rofi
 options="$backlight\n$volume"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
+columns=$(echo -e $options | wc -l)
+width=$(( $columns * 5 ))
+
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -columns $columns -width $width)"
 case $chosen in
     $backlight)
         sh ~/.config/rofi/sidebar/scripts/backlight.sh 1
