@@ -5,6 +5,7 @@ follow = mouse
 geometry = "500x6-30+40"
 shrink = yes
 monitor = 0
+always_run_scripts = true
 
 transparency = 0
 padding = 10
@@ -19,7 +20,7 @@ alignment = left
 stack_duplicates = false
 
 markup = full
-format = <b>%a</b>\n%s\n%b\n%p\n
+format = <b>%a</b>\n%s\n%b\n%n\n
 icon_position = left
 max_icon_size = 75
 min_icon_size = 50
@@ -32,6 +33,7 @@ mouse_middle_click = close_all
 timeout = 3
 background = "#1f1f1fc9"
 foreground = "#ffffff"
+highlight = "#a29bfe"
 
 [urgency_normal]
 timeout = 6
@@ -42,5 +44,10 @@ foreground = "#ffffff"
 timeout = 0
 background = "#a29bfec9"
 foreground = "#ffffff"
+
+[discord_override]
+desktop_entry = "discord"
+format = ""
+script = "~/.config/dunst/scripts/override-discord.sh"
 
 # vim: ft=cfg
