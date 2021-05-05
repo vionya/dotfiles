@@ -45,11 +45,14 @@ timeout = 0
 background = "#a29bfec9"
 foreground = "#ffffff"
 
+# Default Discord desktop notifications fail to navigate to the Discord window on click when in a different workspace
+# This resolves that, basically
 [discord_override]
 desktop_entry = "discord"
 format = ""
 script = "~/.config/dunst/scripts/override-discord.sh"
 
+# This handles the progress bar for when volume/backlight is adjusted by the keyboard bindings
 [vol_light_adjust]
 appname = "Brightness or Volume Level Adjusted"
 format = %s%n
