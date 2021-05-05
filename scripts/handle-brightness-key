@@ -1,0 +1,4 @@
+#!/bin/sh
+
+current=$(xbacklight -get)
+notify-send -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low "Brightness: "

@@ -1,0 +1,13 @@
+#!/bin/sh
+current=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
+muted=$(pactl list sinks | awk '/Mute/ {print $2}')
+
+[ $current -gt 100  ] && pactl set-sink-volume @DEFAULT_SINK@ 100%
+
+case $muted in
+    "yes")
+        notify-send -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low " Volume: "
+        ;;
+    "no")
+        notify-send -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low " Volume: "
+esac

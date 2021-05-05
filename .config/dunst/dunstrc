@@ -50,4 +50,9 @@ desktop_entry = "discord"
 format = ""
 script = "~/.config/dunst/scripts/override-discord.sh"
 
+[vol_light_adjust]
+appname = "Brightness or Volume Level Adjusted"
+format = %s%n
+set_stack_tag = "level change notification"
+
 # vim: ft=cfg
