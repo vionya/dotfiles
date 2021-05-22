@@ -73,7 +73,7 @@ bindsym $mod+Shift+Print exec --no-startup-id killall ffmpeg
 bindsym $mod+Shift+u exec --no-startup-id kitty --class "kitty-unicode-xclip" sh -c "kitty +kitten unicode_input | tr -d '\n' | xsel -ib"
 
 # ## Shows a dmenu list with help for keybinds ##
-bindsym $mod+Shift+h exec --no-startup-id $HOME/bin/i3-keybinds-help | rofi -dmenu -i -markup-rows -p "Keybind Help"
+bindsym $mod+Shift+h exec --no-startup-id $HOME/.cargo/bin/i3-keybinds-help | rofi -dmenu -i -markup-rows -p "Keybind Help"
 
 
 # -- LAYOUT CONTROL --
