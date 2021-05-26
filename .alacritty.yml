@@ -10,7 +10,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: xterm-256color
+  TERM: xterm-alacritty
 
 window:
   # Window dimensions (changes require restart)
@@ -38,7 +38,7 @@ window:
     y: 0
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
+  dynamic_padding: false
 
   # Window decorations
   #
@@ -49,7 +49,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -136,7 +136,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 7
+  size: 7.4
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -173,8 +173,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#1f1f1f'#2E3440'
-    foreground: '#D8DEE9'
+    background: '#1f2430'#2E3440'
+    foreground: '#d9d7ce'
 
     # Bright and dim foreground colors
     #
@@ -189,7 +189,7 @@ colors:
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
   cursor:
-    text: '#ff6a00'
+    # text: '#d9d7ce'
     cursor: '#ffffff'
 
   # Selection colors
@@ -202,25 +202,25 @@ colors:
     background: '#404040'
 
   normal:
-    black:   '#3B4252'
-    red:     '#BF616A'
-    green:   '#A3BE8C'
-    yellow:  '#EBCB8B'
-    blue:    '#81A1C1'
-    magenta: '#B48EAD'
-    cyan:    '#88C0D0'
-    white:   '#E5E9F0'
+    black:   '#191e2a'
+    red:     '#ed8274'
+    green:   '#a6cc70'
+    yellow:  '#fad07b'
+    blue:    '#6dcbfa'
+    magenta: '#cfbafa'
+    cyan:    '#90e1c6'
+    white:   '#c7c7c7'
 
   # Bright colors
   bright:
-    black:   '#4C566A'
-    red:     '#BF616A'
-    green:   '#A3BE8C'
-    yellow:  '#EBCB8B'
-    blue:    '#81A1C1'
-    magenta: '#B48EAD'
-    cyan:    '#8FBCBB'
-    white:   '#ECEFF4'
+    black:   '#686868'
+    red:     '#f28779'
+    green:   '#bae67e'
+    yellow:  '#ffd580'
+    blue:    '#73d0ff'
+    magenta: '#d4bfff'
+    cyan:    '#95e6cb'
+    white:   '#ffffff'
 
   # Indexed Colors
   #
@@ -254,9 +254,9 @@ colors:
 #
 # Specifying a `duration` of `0` will disable the visual bell.
 bell:
-  animation: EaseOutExpo
+  animation: Ease
   duration: 0
-  color: '#ffffff'
+  color: '#a29bfe'
 
 # Background opacity
 #
@@ -492,8 +492,8 @@ key_bindings:
   #- { key: Insert,   mods: Shift,         action: PasteSelection   }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
   - { key: Equals,   mods: Control,       action: ResetFontSize }
-  - { key: Add,      mods: Control|Shift,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: NumpadAdd,      mods: Control|Shift,       action: IncreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,       action: DecreaseFontSize }
   #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
 
   # (Windows only)
