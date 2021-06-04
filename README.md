@@ -2,7 +2,7 @@ A collection of my configuration files that I use for my Linux system.
 Also features some scripts that I've written myself to make life easier
 
 # Software Used
-* **Terminal Emulator** Kitty
+* **Terminal Emulator** Alacritty
 * **Notification Daemon** dunst
 * **Window Manager** i3-gaps
 * **Compositor** ibhagwan/picom

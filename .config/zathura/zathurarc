@@ -5,10 +5,10 @@ map <Space> navigate next
 map <S-Space> navigate previous
 map w feedkeys ":bmark auto<Return>"
 
-set default-bg "#1f1f1f"
-set statusbar-bg "#1f2430"
-set inputbar-bg "#1f2430"
-set completion-highlight-bg "#BBE67E"
+set default-bg "#1f2430"
+set statusbar-bg "#191e2a"
+set inputbar-bg "#191e2a"
+set completion-highlight-bg "#a29bfe"
 
 set default-fg "#cbccc6"
 set statusbar-fg "#cbccc6"

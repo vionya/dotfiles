@@ -230,7 +230,7 @@ colors:
   # Example:
   #   `- { index: 16, color: '#ff00ff' }`
   #
-  #indexed_colors: []
+  indexed_colors: [ { index: 16, color: "#a29bfe" } ]
 
 # Visual Bell
 #

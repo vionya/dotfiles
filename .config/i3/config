@@ -195,7 +195,7 @@ exec --no-startup-id xset -dpms s off
 exec --no-startup-id flameshot &
 
 # Start a script to facilitate MPRIS player Discord rich presences
-exec --no-startup-id python -m mpris_rich_presence --auto
+# exec --no-startup-id python -m mpris_rich_presence --auto
 
 # Start polybar
 exec_always --no-startup-id ~/.config/polybar/custom/launch.sh
