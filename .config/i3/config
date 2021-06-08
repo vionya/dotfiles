@@ -29,7 +29,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous --player $($HOME/b
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause --player $($HOME/bin/get-active-player)
 bindsym XF86AudioNext exec --no-startup-id playerctl next --player $($HOME/bin/get-active-player)
 
-# Bindings to xbacklioght for controlling brightness
+# Bindings to xbacklight for controlling brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight + 10 && $HOME/bin/handle-brightness-key
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10 && $HOME/bin/handle-brightness-key
 
@@ -54,7 +54,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # -- THE COOLER BINDINGS --
 
-# ## Open the system menu sidebar ##
+# ## Open the system menu bar ##
 bindsym $mod+space exec --no-startup-id $HOME/.config/rofi/sidebar/scripts/launch.sh
 
 # ## Menu for switching between active windows ##
