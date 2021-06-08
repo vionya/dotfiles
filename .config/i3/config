@@ -8,7 +8,7 @@ gaps inner 2 # It's pretty like this
 
 # Border stuff
 for_window [class=".*"] border pixel 1
-client.focused          #525252 #000000 #ffffff #d4d4d4 #525252
+client.focused          #a29bfe #000000 #ffffff #d4d4d4 #a29bfe
 client.unfocused        #000000 #000000 #ffffff #747474 #000000
 client.focused_inactive #000000 #000000 #ffffff #747474 #000000
 
