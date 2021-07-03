@@ -1,11 +1,11 @@
 * {
-    light-purple: rgba(162, 155, 254, 50%);
-    light-purple-solid: rgba(162, 155, 254);
-    bg: #191e2a;
-    base: #1f2430c9;
+    light-purple: rgb(162, 155, 254);
+    light-purple-solid: rgb(162, 155, 254);
+    bg: #33415E;
+    base: #141925;
     tr: #00000000;
-    light-green: rgba(19, 55, 35, 50%);
-    light-red: rgba(77, 31, 37, 50%);
+    light-green: rgb(19, 55, 35);
+    light-red: rgb(77, 31, 37);
 }
 
 /* vim:ft=css

@@ -1,7 +1,7 @@
 @import "../colors.rasi"
 
 * {
-    background-color: @tr;
+    background-color: @base;
     font: "feather 48";
 }
 

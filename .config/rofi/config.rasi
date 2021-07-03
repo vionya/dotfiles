@@ -1,7 +1,7 @@
 configuration {
 	sort: true;
 	sorting-method: "fzf";
-	matching: "fuzzy";
+	matching: "normal";
 	theme: "./purple-main.rasi";
 }
 

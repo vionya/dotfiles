@@ -11,7 +11,7 @@ transparency = 0
 padding = 10
 horizontal_padding = 15
 frame_width = 7.5
-frame_color = "#1f2430c9"
+frame_color = "#141925"
 corner_radius = 5
 
 line_height = 0
@@ -31,19 +31,19 @@ mouse_middle_click = close_all
 
 [urgency_low]
 timeout = 3
-background = "#1f2430c9"
-foreground = "#ffffff"
+background = "#1f2430"
+foreground = "#cbccc6"
 highlight = "#a29bfe"
 
 [urgency_normal]
 timeout = 6
 background = "#191e2a"
-foreground = "#ffffff"
+foreground = "#cbccc6"
 
 [urgency_critical]
 timeout = 0
-background = "#a29bfec9"
-foreground = "#ffffff"
+background = "#a29bfe"
+foreground = "#1f2430"
 
 # Default Discord desktop notifications fail to navigate to the Discord window on click when in a different workspace
 # This resolves that, basically
