@@ -1,8 +1,6 @@
 configuration {
     show-icons: false;
     display-drun: "";
-    fake-transparency: false;
-    bw: 0;
     drun-display-format: "{icon}";
     location: 0;
     sidebar-mode: false;

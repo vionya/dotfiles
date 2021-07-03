@@ -10,7 +10,8 @@ options="$backlight\n$volume"
 columns=$(echo -e $options | wc -l)
 width=$(( $columns * 5 ))
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -columns $columns -width $width)"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "listview { columns: $columns; } window { width: $width%; }")"
+
 case $chosen in
     $backlight)
         sh ~/.config/rofi/sidebar/scripts/backlight.sh 1

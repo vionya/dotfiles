@@ -11,7 +11,7 @@ options="$incr\n$mid\n$decr\n$custom"
 columns=$(echo -e $options | wc -l)
 width=$(( $columns * 5 ))
 
-choice="$(echo -e "$options" | $rofi_command -dmenu -selected-row $1 -columns $columns -width $width)"
+choice="$(echo -e "$options" | $rofi_command -dmenu -selected-row $1 -theme-str "listview { columns: $columns; } window { width: $width%; }")"
 
 case $choice in
     $incr)
@@ -24,7 +24,7 @@ case $choice in
         xbacklight -dec 10 && sh ~/.config/rofi/sidebar/scripts/backlight.sh 2
         ;;
     $custom)
-        value=$(echo "" | rofi -theme ~/.config/rofi/text_input.rasi -dmenu -p "Backlight %:")
+        value=$(echo "" | rofi -theme ~/.config/rofi/text-input.rasi -dmenu -p "Backlight %:")
         xbacklight -set $value
         ;;
 esac

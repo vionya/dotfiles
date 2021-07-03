@@ -9,7 +9,7 @@ options="$gui\n$full"
 columns=$(echo -e $options | wc -l)
 width=$(( $columns * 5 ))
 
-choice="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -columns $columns -width $width)"
+choice="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "listview { columns: $columns; } window { width: $width%; }")"
 
 case $choice in
     $gui)

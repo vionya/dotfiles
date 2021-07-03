@@ -2,7 +2,6 @@ configuration {
 	sort: true;
 	sorting-method: "fzf";
 	matching: "fuzzy";
-	fake-transparency: false;
 	theme: "./purple-main.rasi";
 }
 

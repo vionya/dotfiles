@@ -12,7 +12,7 @@ options="$adjusters\n$launcher\n$sys"
 columns=$(echo -e $options | wc -l)
 width=$(( $columns * 5 ))
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 1 -columns $columns -width $width)"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 1 -theme-str "listview { columns: $columns; } window { width: $width%; }")"
 case $chosen in
     $launcher)
         rofi -theme ~/.config/rofi/sidebar/apps_south.rasi -modi drun -show drun

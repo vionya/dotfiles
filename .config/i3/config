@@ -26,7 +26,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Bindings to Playerctl for controlling MPRIS media players
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous --player $($HOME/bin/get-active-player)
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause --player $($HOME/bin/get-active-player)
+bindsym XF86AudioPlay exec --no-startup-id playerctl --player $($HOME/bin/get-active-player) play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next --player $($HOME/bin/get-active-player)
 
 # Bindings to xbacklight for controlling brightness
@@ -70,7 +70,7 @@ bindsym $mod+Print exec --no-startup-id $HOME/bin/region-gif-capture
 bindsym $mod+Shift+Print exec --no-startup-id killall ffmpeg
 
 # ## Open a window to quickly copy a unicode character to the clipboard ##
-bindsym $mod+Shift+u exec --no-startup-id $HOME/.cargo/bin/unicode-input | rofi -dmenu -i | grep -oP '^\K(.+)(?=\s{3}\w+)' | tr -d '\n' | xsel -ib
+bindsym $mod+Shift+u exec --no-startup-id $HOME/.cargo/bin/unicode-input | rofi -dmenu -i -matching normal | grep -oP '^\K(.+)(?=\s{3}\w+)' | tr -d '\n' | xsel -ib
 
 # ## Shows a dmenu list with help for keybinds ##
 bindsym $mod+Shift+h exec --no-startup-id $HOME/.cargo/bin/i3-keybinds-help | rofi -dmenu -i -markup-rows -p "Keybind Help"

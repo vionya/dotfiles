@@ -11,7 +11,7 @@ options="$exitwm\n$reboot\n$_suspend\n$shutdown"
 columns=$(echo -e $options | wc -l)
 width=$(( $columns * 5 ))
 
-choice="$(echo -e "$options" | $rofi_command -dmenu -columns $columns -width $width)"
+choice="$(echo -e "$options" | $rofi_command -dmenu -theme-str "listview { columns: $columns; } window { width: $width%; }")"
 
 case $choice in
     $exitwm)
