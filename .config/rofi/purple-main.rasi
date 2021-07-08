@@ -43,21 +43,19 @@ element {
 
 element-text {
     highlight: none;
+    color: white;
 }
 
-element.selected.normal {
-    background-color: @light-purple-solid;
-    text-color: @bg;
+element-text.urgent {
+    color: @light-purple-solid;
 }
 
-element.selected.urgent {
+element.selected {
     background-color: @light-purple-solid;
-    text-color: @bg;
 }
 
-element.selected.active {
-    background-color: @light-purple-solid;
-    text-color: @bg;
+element-text.selected {
+    color: @bg;
 }
 
 inputbar {

@@ -198,8 +198,8 @@ colors:
   # background is unset, selection color will be the inverse of the cell colors.
   # If only text is unset the cell text color will remain the same.
   selection:
-    text: '#eaeaea'
-    background: '#404040'
+    text: '#CBCCC6'
+    background: '#33415E'
 
   normal:
     black:   '#191e2a'

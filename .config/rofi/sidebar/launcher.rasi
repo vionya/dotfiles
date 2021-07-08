@@ -33,12 +33,19 @@ element {
     horizontal-align: center;
     border-radius: 5px;
     padding: 9 0 0 9;
-    text-color: white;
+}
+
+element-text {
+    color: white;
+    background-color: transparent;
+}
+
+element-text.selected {
+    color: @bg;
 }
 
 element.selected {
     background-color: @light-purple-solid;
-    text-color: @bg;
 }
 
 /* vim:ft=css
