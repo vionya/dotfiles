@@ -1,4 +1,7 @@
 #!/bin/sh
 
+# argv will always be one of '+' or '-'
+xbacklight $1 10
+
 current=$(xbacklight -get)
 notify-send -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low "Brightness: "

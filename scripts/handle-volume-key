@@ -1,4 +1,7 @@
 #!/bin/sh
+# argv will always be one of '+' or '-'
+pactl set-sink-volume @DEFAULT_SINK@ "$15%"
+
 current=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
 muted=$(pactl list sinks | awk '/Mute/ {print $2}')
 
