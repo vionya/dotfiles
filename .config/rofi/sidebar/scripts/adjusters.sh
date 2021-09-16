@@ -14,9 +14,9 @@ chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "
 
 case $chosen in
     $backlight)
-        sh ~/.config/rofi/sidebar/scripts/backlight.sh 1
+        sh ~/.config/rofi/sidebar/scripts/backlight.sh 3
         ;;
     $volume)
-        sh ~/.config/rofi/sidebar/scripts/volume.sh 1
+        sh ~/.config/rofi/sidebar/scripts/volume.sh 3
         ;;
 esac

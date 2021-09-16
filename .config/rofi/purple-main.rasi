@@ -3,6 +3,9 @@ configuration {
     drun-display-format: "{icon} {name}";
     location: 0;
     sidebar-mode: false;
+    window {
+        close-on-delete: false;
+    }
 }
 
 @import "./colors.rasi"

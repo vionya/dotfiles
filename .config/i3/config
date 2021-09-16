@@ -7,7 +7,7 @@ gaps top 24 # Make room for polybar
 gaps inner 2 # It's pretty like this
 
 # Border stuff
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 client.focused          #a29bfe #000000 #ffffff #d4d4d4 #a29bfe
 client.unfocused        #000000 #000000 #ffffff #747474 #000000
 client.focused_inactive #000000 #000000 #ffffff #747474 #000000
@@ -19,8 +19,8 @@ for_window [class="kitty-unicode-xclip"] floating enable, resize set 850 500, mo
 # -- BASIC BINDINGS --
 
 # Bindings to PulseAudio for managing audio
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $HOME/bin/handle-volume-key
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $HOME/bin/handle-volume-key
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/bin/handle-volume-key +
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/bin/handle-volume-key -
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
@@ -30,8 +30,8 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl --player $($HOME/bin/get-ac
 bindsym XF86AudioNext exec --no-startup-id playerctl next --player $($HOME/bin/get-active-player)
 
 # Bindings to xbacklight for controlling brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight + 10 && $HOME/bin/handle-brightness-key
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10 && $HOME/bin/handle-brightness-key
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/bin/handle-brightness-key +
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/bin/handle-brightness-key -
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
