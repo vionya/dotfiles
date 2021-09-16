@@ -7,7 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'hugolgst/vimsence'
+Plugin 'vimsence/vimsence'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ayu-theme/ayu-vim'
@@ -74,3 +74,16 @@ set incsearch
 " Fix issues with vim being weird with
 " background colour in kitty
 let &t_ut=''
+
+if has('nvim')
+    set rtp+=~/Projects/rust/nvimsence.rs
+    set rtp-=~/.vim/bundle/vimsence
+    au TextYankPost * silent! lua vim.highlight.on_yank {higroup="Search", timeout=500}
+
+    let g:nvimsence_state = "xyz"
+else
+    let sem_version = matchstr(execute('version'), 'IMproved \zs[0-9\.]*\ze')
+    let g:vimsence_small_text = "Vim " . sem_version
+endif
+
+command Indent normal gg=G
