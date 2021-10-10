@@ -3,14 +3,14 @@ set $mod Mod4
 
 font pango:monospace 8
 
-gaps top 24 # Make room for polybar
+gaps bottom 24 # Make room for polybar
 gaps inner 2 # It's pretty like this
 
 # Border stuff
 for_window [class=".*"] border pixel 2
-client.focused          #a29bfe #000000 #ffffff #d4d4d4 #a29bfe
-client.unfocused        #000000 #000000 #ffffff #747474 #000000
-client.focused_inactive #000000 #000000 #ffffff #747474 #000000
+client.focused          #a29bfe #000000 #ffffff #cbccc6 #a29bfe
+client.unfocused        #1f2430 #000000 #ffffff #747474 #1f2430
+client.focused_inactive #1f2430 #000000 #ffffff #747474 #1f2430
 
 for_window [class="flameshot"] floating enable
 for_window [class="kitty-unicode-xclip"] floating enable, resize set 850 500, move position center
@@ -37,7 +37,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/bin/handle-brightness-k
 floating_modifier $mod
 
 # Start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # Kill focused window
 bindsym $mod+Shift+q kill

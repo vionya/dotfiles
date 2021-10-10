@@ -10,7 +10,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vimsence/vimsence'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'ayu-theme/ayu-vim'
+Plugin 'Luxed/ayu-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
@@ -31,7 +31,7 @@ let NERDTreeShowHidden=1
 
 syntax on
 
-let ayucolor="mirage"
+let g:ayucolor="mirage"
 colorscheme ayu
 
 set tabstop=4 shiftwidth=4 expandtab
@@ -87,3 +87,5 @@ else
 endif
 
 command Indent normal gg=G
+
+unlet python_highlight_space_errors

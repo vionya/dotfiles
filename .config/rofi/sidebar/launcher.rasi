@@ -11,8 +11,10 @@ window {
     location: south;
     padding: 10;
     background-color: @base;
-    border-radius: 5;
+    // border-radius: 4;
     y-offset: -5%;
+    border: 2px;
+    border-color: @light-purple-solid;
 }
 
 inputbar {
@@ -24,14 +26,14 @@ listview {
     dynamic: true;
     lines: 1;
     fixed-height: false;
-    spacing: 10;
+    spacing: 8;
 }
 
 element {
     background-color: @bg;
     vertical-align: center;
     horizontal-align: center;
-    border-radius: 5px;
+    border-radius: 4;
     padding: 9 0 0 9;
 }
 
@@ -46,6 +48,8 @@ element-text.selected {
 
 element.selected {
     background-color: @light-purple-solid;
+    // border: 0 0 5 0;
+    // border-color: @light-purple-solid;
 }
 
 /* vim:ft=css

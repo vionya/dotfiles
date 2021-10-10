@@ -2,7 +2,8 @@ configuration {
 	sort: true;
 	sorting-method: "fzf";
 	matching: "normal";
-	theme: "./purple-main.rasi";
 }
+
+@theme "./purple-main.rasi"
 
 /* vim:ft=css
