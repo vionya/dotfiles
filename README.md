@@ -12,4 +12,9 @@ Also features some scripts that I've written myself to make life easier
 # Additional Software
 * **Document Reader/Viewer** zathura
 
+# Fonts
+* Terminal Main Font: Fira Code
+* Bold and Regular Italic Terminal Font: MesloLGS NF
+* sans-serif family: Dejavu Sans
+
 screenshots or something: todo
