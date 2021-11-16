@@ -27,12 +27,16 @@ if exists('+termguicolors')
 endif
 
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 
 syntax on
 
-let g:ayucolor="mirage"
+let g:ayucolor = "mirage"
+let g:ayu_italic_comment = 1
 colorscheme ayu
+
+let g:airline_theme = 'ayu_mirage'
+let g:airline#extensions#tabline#enabled = 1
 
 set tabstop=4 shiftwidth=4 expandtab
 
@@ -48,9 +52,6 @@ hi Folded guibg=NONE
 
 set laststatus=2
 set noshowmode
-
-let g:airline_theme='ayu_mirage'
-let g:airline#extensions#tabline#enabled = 1
 
 " Remap <C-{arrow key}> to move around tabs
 nnoremap <C-Left> :tabprevious<CR>
@@ -71,21 +72,26 @@ set hlsearch
 set ignorecase
 set incsearch
 
-" Fix issues with vim being weird with
-" background colour in kitty
-let &t_ut=''
-
 if has('nvim')
     set rtp+=~/Projects/rust/nvimsence.rs
     set rtp-=~/.vim/bundle/vimsence
     au TextYankPost * silent! lua vim.highlight.on_yank {higroup="Search", timeout=500}
-
-    let g:nvimsence_state = "xyz"
 else
     let sem_version = matchstr(execute('version'), 'IMproved \zs[0-9\.]*\ze')
     let g:vimsence_small_text = "Vim " . sem_version
 endif
 
-command Indent normal gg=G
-
 unlet python_highlight_space_errors
+
+function! CreatePreview()
+    sil! bd scratch
+    redir @"> | sil! echo system("mdcat -c", join(getline(1, '$'), "\n")) | redir END
+    bel 150vs
+    noswapfile hide enew
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
+    file scratch
+    1put!
+endfunction
+
+command! Preview call CreatePreview()
