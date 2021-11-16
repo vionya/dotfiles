@@ -9,8 +9,8 @@ muted=$(pactl list sinks | awk '/Mute/ {print $2}')
 
 case $muted in
     "yes")
-        notify-send -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low " Volume: "
+        dunstify -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low " Volume: " -r 2
         ;;
     "no")
-        notify-send -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low " Volume: "
+        dunstify -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low " Volume: " -r 2
 esac

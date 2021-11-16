@@ -2,15 +2,16 @@
 idle_threshold = 120
 show_age_threshold = 10
 follow = mouse
-geometry = "500x6-30+40"
+width = 400
+notification_limit = 3
+offset = 30x40
 shrink = yes
 monitor = 0
-always_run_scripts = true
 
 transparency = 0
 padding = 10
 horizontal_padding = 15
-frame_width = 7.5
+frame_width = 4
 frame_color = "#141925"
 corner_radius = 5
 
@@ -29,6 +30,8 @@ mouse_right_click = close_current
 mouse_left_click = do_action
 mouse_middle_click = close_all
 
+font = DejaVu 12
+
 [urgency_low]
 timeout = 3
 background = "#1f2430"
@@ -44,13 +47,6 @@ foreground = "#cbccc6"
 timeout = 0
 background = "#a29bfe"
 foreground = "#1f2430"
-
-# Default Discord desktop notifications fail to navigate to the Discord window on click when in a different workspace
-# This resolves that, basically
-[discord_override]
-desktop_entry = "discord"
-format = ""
-script = "~/.config/dunst/scripts/override-discord.sh"
 
 # This handles the progress bar for when volume/backlight is adjusted by the keyboard bindings
 [vol_light_adjust]
