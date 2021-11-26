@@ -2,18 +2,16 @@
 idle_threshold = 120
 show_age_threshold = 10
 follow = mouse
-width = 400
-notification_limit = 3
+width = (300, 400)
+notification_limit = 6
 offset = 30x40
-shrink = yes
-monitor = 0
 
 transparency = 0
 padding = 10
-horizontal_padding = 15
-frame_width = 4
-frame_color = "#141925"
-corner_radius = 5
+horizontal_padding = 10
+frame_width = 2
+frame_color = "#A29BFE"
+corner_radius = 6
 
 line_height = 0
 alignment = left
@@ -34,19 +32,22 @@ font = DejaVu 12
 
 [urgency_low]
 timeout = 3
-background = "#1f2430"
-foreground = "#cbccc6"
-highlight = "#a29bfe"
+background = "#1F2430"
+foreground = "#CBCCC6"
+highlight = "#A29BFE"
+frame_color = "#A29BFE"
 
 [urgency_normal]
 timeout = 6
-background = "#191e2a"
-foreground = "#cbccc6"
+background = "#191E2A"
+foreground = "#CBCCC6"
+frame_color = "#A29BFE"
 
 [urgency_critical]
 timeout = 0
-background = "#a29bfe"
-foreground = "#1f2430"
+background = "#A29BFE"
+foreground = "#1F2430"
+frame_color = "#A29BFE"
 
 # This handles the progress bar for when volume/backlight is adjusted by the keyboard bindings
 [vol_light_adjust]
