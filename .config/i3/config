@@ -58,7 +58,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+space exec --no-startup-id $HOME/.config/rofi/sidebar/scripts/launch.sh
 
 # ## Menu for switching between active windows ##
-bindsym $mod+Tab exec --no-startup-id rofi -show window -modi window -show-icons
+bindsym $mod+Tab exec --no-startup-id rofi -show window -modi window -show-icons -window-format "{w} | {c:10}   {t}"
 
 # ## Launch Flameshot in GUI mode for screenshotting ##
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui

@@ -2,7 +2,7 @@
 idle_threshold = 120
 show_age_threshold = 10
 follow = mouse
-width = (300, 400)
+width = (400, 500)
 notification_limit = 6
 offset = 30x40
 
@@ -29,6 +29,7 @@ mouse_left_click = do_action
 mouse_middle_click = close_all
 
 font = DejaVu 12
+progress_bar_max_width = 400
 
 [urgency_low]
 timeout = 3
