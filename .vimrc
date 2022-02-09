@@ -1,24 +1,37 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'preservim/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vimsence/vimsence'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'Luxed/ayu-vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'tpope/vim-surround'
+" File manager
+Plug 'preservim/nerdtree'
 
-call vundle#end()
-filetype plugin indent on
+" Git
+Plug 'tpope/vim-fugitive'
+
+" QoL
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'lukas-reineke/indent-blankline.nvim'
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Visual
+Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
+
+" Theme
+Plug 'Luxed/ayu-vim'
+Plug 'vim-airline/vim-airline-themes', { 'frozen': 1 } " Frozen b/c customized colors and stuff
+
+" Syntax
+Plug 'sheerun/vim-polyglot'
+Plug 'rust-lang/rust.vim'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight'
+
+call plug#end()
 
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -38,15 +51,22 @@ colorscheme ayu
 let g:airline_theme = 'ayu_mirage'
 let g:airline#extensions#tabline#enabled = 1
 
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+    let g:airline_symbols.colnr = '℅ '
+    let g:airline_symbols.linenr = ' ¶ '
+    let g:airline_symbols.maxlinenr = ' ☰ '
+endif
+
+let g:indent_blankline_use_treesitter = v:true
+let g:indent_blankline_show_current_context = v:true
+let g:indent_blankline_show_current_context_start_on_current_line = v:false
+hi IndentBlanklineContextChar guifg=#A29BFE gui=nocombine
+
 set tabstop=4 shiftwidth=4 expandtab
 
-set autoindent
-set smartindent
-set title
-set showcmd
-set showmatch
-set autowrite
-set number
+set autoindent smartindent title showcmd showmatch autowrite number
 
 hi Folded guibg=NONE
 
@@ -68,18 +88,12 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
-set hlsearch
-set ignorecase
-set incsearch
+set hlsearch ignorecase incsearch
 
 if has('nvim')
     let g:rich_presence_binary = "target/release/nvimsence-rs"
     set rtp+=~/Projects/rust/nvimsence.rs
-    set rtp-=~/.vim/bundle/vimsence
     au TextYankPost * silent! lua vim.highlight.on_yank {higroup="Search", timeout=500}
-else
-    let sem_version = matchstr(execute('version'), 'IMproved \zs[0-9\.]*\ze')
-    let g:vimsence_small_text = "Vim " . sem_version
 endif
 
 unlet python_highlight_space_errors
@@ -89,8 +103,7 @@ function! CreatePreview()
     redir @"> | sil! echo system("mdcat -c", join(getline(1, '$'), "\n")) | redir END
     bel 150vs
     noswapfile hide enew
-    setlocal buftype=nofile
-    setlocal bufhidden=hide
+    setlocal buftype=nofile bufhidden=hide
     file scratch
     1put!
 endfunction
