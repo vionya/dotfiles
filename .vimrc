@@ -54,7 +54,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
-    let g:airline_symbols.colnr = '℅ '
+    let g:airline_symbols.colnr = ' ℅ '
     let g:airline_symbols.linenr = ' ¶ '
     let g:airline_symbols.maxlinenr = ' ☰ '
 endif
@@ -63,6 +63,11 @@ let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_show_current_context = v:true
 let g:indent_blankline_show_current_context_start_on_current_line = v:false
 hi IndentBlanklineContextChar guifg=#A29BFE gui=nocombine
+
+" Don't indent on `o` in markdown
+let g:vim_markdown_new_list_item_indent = 0
+" Don't conceal codeblocks in markdown
+let g:vim_markdown_conceal_code_blocks = 0
 
 set tabstop=4 shiftwidth=4 expandtab
 
@@ -98,14 +103,14 @@ endif
 
 unlet python_highlight_space_errors
 
-function! CreatePreview()
-    sil! bd scratch
-    redir @"> | sil! echo system("mdcat -c", join(getline(1, '$'), "\n")) | redir END
-    bel 150vs
-    noswapfile hide enew
-    setlocal buftype=nofile bufhidden=hide
-    file scratch
-    1put!
-endfunction
-
-command! Preview call CreatePreview()
+" function! CreatePreview()
+"     sil! bd scratch
+"     redir @"> | sil! echo system("mdcat -c", join(getline(1, '$'), "\n")) | redir END
+"     bel 150vs
+"     noswapfile hide enew
+"     setlocal buftype=nofile bufhidden=hide
+"     file scratch
+"     1put!
+" endfunction
+" 
+" command! Preview call CreatePreview()
