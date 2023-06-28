@@ -28,7 +28,7 @@ Plug 'vim-airline/vim-airline-themes', { 'frozen': 1 } " Frozen b/c customized c
 " Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'rust-lang/rust.vim'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'johnstef99/vim-nerdtree-syntax-highlight'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
@@ -93,6 +93,9 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
+" Disable mouse
+set mouse=
+
 set hlsearch ignorecase incsearch
 
 if has('nvim')
@@ -112,5 +115,5 @@ unlet python_highlight_space_errors
 "     file scratch
 "     1put!
 " endfunction
-" 
+"
 " command! Preview call CreatePreview()
