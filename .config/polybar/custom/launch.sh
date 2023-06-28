@@ -9,4 +9,4 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar
-polybar -c ~/.config/polybar/custom/config.ini main -l error 2>~/polybar_log.log &
+polybar -c ~/.config/polybar/custom/config.ini main -l notice 2>~/polybar_log.log &

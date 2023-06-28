@@ -3,8 +3,10 @@ set $mod Mod4
 
 font pango:monospace 8
 
-gaps bottom 24 # Make room for polybar
-gaps inner 2 # It's pretty like this
+# Make room for polybar
+gaps bottom 24
+# It's pretty like this
+gaps inner 2 
 
 # Border stuff
 for_window [class=".*"] border pixel 2
@@ -36,7 +38,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/bin/handle-brightness-k
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# Start a terminal
+# ## Start a terminal instance ##
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # Kill focused window
