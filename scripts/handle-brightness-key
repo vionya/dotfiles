@@ -4,4 +4,4 @@
 xbacklight $1 10
 
 current=$(xbacklight -get)
-dunstify -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low "Brightness: " -r 2
+dunstify -h int:value:$current -a "bright_or_vol_change" -u low "Brightness: " -r 2

@@ -12,8 +12,8 @@ muted=$(pactl list sinks | awk '/Mute/ {print $2}')
 
 case $muted in
     "yes")
-        dunstify -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low " Volume: " -r 2
+        dunstify -h int:value:$current -a "bright_or_vol_change" -u low " Volume: " -r 2
         ;;
     "no")
-        dunstify -h int:value:$current -a "Brightness or Volume Level Adjusted" -u low " Volume: " -r 2
+        dunstify -h int:value:$current -a "bright_or_vol_change" -u low " Volume: " -r 2
 esac
