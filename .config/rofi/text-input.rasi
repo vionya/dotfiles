@@ -18,6 +18,7 @@ window {
     anchor: center;
     location: center;
     width: 20%;
+    border-radius: 6;
     border: 2px;
     border-color: @light-purple-solid;
 }
@@ -26,7 +27,6 @@ mainbox {
     children: [ inputbar ];
     padding: 0% 0% 0% 0%;
     background-color: @base;
-    // border-radius: 5;
 }
 
 listview {
@@ -36,7 +36,7 @@ listview {
 inputbar {
     background-color: @bg;
     padding: 4;
-    border-radius: 4;
+    border-radius: 6;
     children: [ prompt, entry ];
     margin: 5;
 }

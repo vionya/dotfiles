@@ -8,6 +8,7 @@ window {
     anchor: center;
     location: center;
     width: 40%;
+    border-radius: 6;
     border: 2px;
     border-color: @light-purple-solid;
 }
@@ -16,7 +17,6 @@ mainbox {
     children: [ inputbar, listview, mode-switcher ];
     padding: 0% 0% 0% 0%;
     background-color: @base;
-    // border-radius: 5;
 }
 
 listview {
@@ -27,7 +27,7 @@ listview {
 }
 
 element {
-    border-radius: 4;
+    border-radius: 6;
     background-color: @bg;
     text-color: white;
     padding: 6;
@@ -54,7 +54,7 @@ element-text.selected {
 inputbar {
     background-color: @bg;
     padding: 4;
-    border-radius: 4;
+    border-radius: 6;
     children: [prompt, entry, case-indicator];
     margin: 10 8 8 8;
 }
@@ -85,7 +85,7 @@ mode-switcher {
 button {
     text-color: white;
     background-color: @bg;
-    border-radius: 4;
+    border-radius: 6;
     padding: 6;
 }
 
