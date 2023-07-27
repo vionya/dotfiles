@@ -15,7 +15,8 @@ choice="$(echo -e "$options" | $rofi_command -dmenu -theme-str "listview { colum
 
 case $choice in
     $exitwm)
-        i3-msg exit
+        bspc quit
+        # i3-msg exit
         ;;
     $reboot)
         reboot

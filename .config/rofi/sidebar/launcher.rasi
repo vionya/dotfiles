@@ -11,7 +11,7 @@ window {
     location: south;
     padding: 10;
     background-color: @base;
-    // border-radius: 4;
+    border-radius: 6;
     y-offset: -5%;
     border: 2px;
     border-color: @light-purple-solid;
@@ -33,7 +33,7 @@ element {
     background-color: @bg;
     vertical-align: center;
     horizontal-align: center;
-    border-radius: 4;
+    border-radius: 6;
     padding: 9 0 0 9;
 }
 

@@ -5,8 +5,9 @@ font pango:monospace 8
 
 # Make room for polybar
 gaps bottom 24
+# gaps top 24
 # It's pretty like this
-gaps inner 2 
+gaps inner 2
 
 # Border stuff
 for_window [class=".*"] border pixel 2
