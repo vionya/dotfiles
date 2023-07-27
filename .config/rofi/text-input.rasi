@@ -42,14 +42,14 @@ inputbar {
 }
 
 entry {
-    font: "FantasqueSansMono Nerd Font 12";
+    font: "Fira Code Regular 14";
     text-color: white;
     padding: 8 12 8 12;
 }
 
 prompt {
     enabled: true;
-    font: "FantasqueSansMono Nerd Font 12";
+    font: "Fira Code Regular 14";
     text-color: @light-purple-solid;
     padding: 8 0 8 12;
 }
