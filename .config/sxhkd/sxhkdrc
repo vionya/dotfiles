@@ -191,4 +191,4 @@ super + shift + Print
 
 # Unicode Quick Copy
 super + shift + u
-    $HOME/.cargo/bin/unicode-input | rofi -dmenu -i -matching normal | grep -oP '^\K(.+)(?=\s{3}\w+)' | tr -d '\n' | xsel -ib
+    $HOME/.cargo/bin/unicode-input | rofi -dmenu -i -matching normal | grep -oP '^\K(.+)(?=\s\{3\}\w+)' | tr -d '\n' | xsel -ib

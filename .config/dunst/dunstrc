@@ -4,7 +4,9 @@ show_age_threshold = 10
 follow = mouse
 width = (400, 500)
 notification_limit = 6
-offset = 30x40
+offset = 30x50
+# offset = 30x40
+origin = bottom-right
 
 transparency = 0
 padding = 10

@@ -100,6 +100,7 @@ set hlsearch ignorecase incsearch
 
 if has('nvim')
     let g:rich_presence_binary = "target/release/nvimsence-rs"
+    let g:nvimsence_show_buttons = 0
     set rtp+=~/Projects/rust/nvimsence.rs
     au TextYankPost * silent! lua vim.highlight.on_yank {higroup="Search", timeout=500}
 endif
