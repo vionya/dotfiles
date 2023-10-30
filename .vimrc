@@ -30,6 +30,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'rust-lang/rust.vim'
 Plug 'johnstef99/vim-nerdtree-syntax-highlight'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'ocaml/vim-ocaml'
 
 call plug#end()
 
@@ -106,6 +107,9 @@ if has('nvim')
 endif
 
 unlet python_highlight_space_errors
+
+let g:opamshare = substitute(system('opam var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 " function! CreatePreview()
 "     sil! bd scratch

@@ -5,8 +5,9 @@ CURRENT_SINK_RAW=$( pactl list sinks short | grep RUNNING | sed -e 's,^\([0-9][0
 # argv will always be one of '+' or '-'
 pactl set-sink-volume $SINK "$15%"
 
-current=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
-muted=$(pactl list sinks | awk '/Mute/ {print $2}')
+curidx=$(pacmd list-sinks | awk '/^\s+\* index/ {print $3}')
+current=$(pacmd dump-volumes | awk "/^Sink ${curidx}/{print \$8}" | sed 's/\%//')
+muted=$(pacmd list-sinks | tr -d '\n' | sed 's/.*?* index//' | sed 's/.*muted://' | awk '{print $1}')
 
 [ $current -gt 100  ] && pactl set-sink-volume @DEFAULT_SINK@ 100%
 
