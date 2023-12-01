@@ -2,7 +2,7 @@
 idle_threshold = 120
 show_age_threshold = 10
 follow = mouse
-width = (400, 500)
+width = (200, 500)
 notification_limit = 6
 offset = 30x50
 # offset = 30x40
