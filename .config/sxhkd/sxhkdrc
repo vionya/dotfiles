@@ -185,6 +185,11 @@ super + shift + s
 super + Print
     $HOME/bin/region-gif-capture
 
+
+# MP4 Region Record
+super + alt + Print
+    $HOME/bin/region-mp4-capture
+
 # End Screen Record
 super + shift + Print
     killall ffmpeg

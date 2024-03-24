@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Confirm that the MP4 directory exists, and create it if not
+[ -d ~/Videos/MP4-captures ] || mkdir ~/Videos/MP4-captures
+
+# Get the dimensions for the capture region via slop
+DIMENSIONS=$(slop -f "%x %y %w %h %g %i" -c 0.162,0.155,0.254,0.5 -lD) || exit 1
+read -r X Y W H G ID < <(echo $DIMENSIONS)
+
+# Create temp files here so as to not create them if we cancel
+TMP_FILE=$(mktemp /tmp/outXXXXXXXXX.avi)
+
+# Gee I wonder what this does
+notify-send -t 1000 -a "MP4 Region Capture" "MP4 recording started"
+
+# First, record the region specified by slop into a temporary avi file
+ffmpeg -y -f x11grab -framerate 30 -s "$W"x"$H" -i :0.0+$X,$Y -c:v huffyuv $TMP_FILE
+# This has no termination point defined here, so we wait until the command to kill ffmpeg entirely is executed
+# Because I am lazy
+
+# Confirm that AVI is being converted to MP4
+notify-send -t 1000 -a "MP4 Region Capture" "Processing recording..."
+
+# Convert temporary AVI to final MP4
+ffmpeg -y -i $TMP_FILE "$HOME/Videos/MP4-captures/$(date +"%Y-%m-%d_%H-%M-%S").mp4"
+
+# Cleanup temp file
+rm $TMP_FILE
+
+# Send a notification to confirm that the GIF was saved successfully
+notify-send -t 1000 -a "MP4 Region Capture" "MP4 saved"
