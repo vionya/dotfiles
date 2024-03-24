@@ -58,21 +58,6 @@ return require('packer').startup(function(use)
     -- Rust support
     use 'rust-lang/rust.vim'
     -- code outline
-    --[[
-    use {
-        "hedyhli/outline.nvim",
-        config = function()
-            -- Example mapping to toggle outline
-            vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>",
-            { desc = "Toggle Outline" })
-
-            require("outline").setup {
-                -- Your setup opts here (leave empty to use defaults)
-            }
-        end,
-    }
-    ]]
-
     use({
         "stevearc/aerial.nvim",
         config = function()
