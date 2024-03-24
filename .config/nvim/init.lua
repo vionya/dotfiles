@@ -29,3 +29,8 @@ require('nvim-treesitter.configs').setup {
     auto_install = false,
     highlight = { enable = true }
 }
+
+-- load rich presence program
+vim.g.rich_presence_binary = 'target/release/nvimsence-rs'
+vim.g.nvimsence_show_buttons = 0
+vim.opt.rtp:append('~/Projects/rust/nvimsence.rs')
