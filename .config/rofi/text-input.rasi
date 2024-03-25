@@ -18,9 +18,9 @@ window {
     anchor: center;
     location: center;
     width: 20%;
-    border-radius: 6;
+    border-radius: 12;
     border: 2px;
-    border-color: @light-purple-solid;
+    border-color: @highlight;
 }
 
 mainbox {
@@ -36,21 +36,21 @@ listview {
 inputbar {
     background-color: @bg;
     padding: 4;
-    border-radius: 6;
+    border-radius: 12;
     children: [ prompt, entry ];
     margin: 5;
 }
 
 entry {
     font: "Fira Code Regular 14";
-    text-color: white;
+    text-color: @text;
     padding: 8 12 8 12;
 }
 
 prompt {
     enabled: true;
     font: "Fira Code Regular 14";
-    text-color: @light-purple-solid;
+    text-color: @highlight;
     padding: 8 0 8 12;
 }
 

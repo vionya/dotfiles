@@ -29,6 +29,8 @@ elseif colorscheme == 'rose-pine' then
 elseif colorscheme == 'frappe' then
     require('catppuccin').setup { flavour = 'frappe' }
     colorscheme = 'catppuccin'
+elseif colorscheme == "seoul256-light" then
+    vim.g.seoul256_background = 254
 end
 
 if lualine_opts ~= nil then

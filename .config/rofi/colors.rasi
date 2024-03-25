@@ -1,11 +1,21 @@
+// * {
+//     highlight: rgb(162, 155, 254);
+//     bg: #33415E;
+//     base: #141925;
+//     tr: #00000000;
+//     light-green: rgb(19, 55, 35);
+//     light-red: rgb(77, 31, 37);
+//     text: white;
+// }
+
 * {
-    light-purple: rgb(162, 155, 254);
-    light-purple-solid: rgb(162, 155, 254);
-    bg: #33415E;
-    base: #141925;
+    highlight: #f48ead;
+    bg: #E9E9E9;
+    base: #f1f1f1;
     tr: #00000000;
-    light-green: rgb(19, 55, 35);
-    light-red: rgb(77, 31, 37);
+    light-green: #005f00;
+    light-red: #870100;
+    text: #4e4e4e;
 }
 
 /* vim:ft=css

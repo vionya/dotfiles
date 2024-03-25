@@ -8,9 +8,9 @@ window {
     anchor: center;
     location: center;
     width: 40%;
-    border-radius: 6;
+    border-radius: 12;
     border: 2px;
-    border-color: @light-purple-solid;
+    border-color: @highlight;
 }
 
 mainbox {
@@ -27,24 +27,24 @@ listview {
 }
 
 element {
-    border-radius: 6;
+    border-radius: 12;
     background-color: @bg;
-    text-color: white;
+    text-color: @text;
     padding: 6;
 }
 
 element-text {
     highlight: none;
-    color: white;
+    color: @text;
     padding: 0 3;
 }
 
 element-text.urgent {
-    color: @light-purple-solid;
+    color: @highlight;
 }
 
 element.selected {
-    background-color: @light-purple-solid;
+    background-color: @highlight;
 }
 
 element-text.selected {
@@ -54,26 +54,26 @@ element-text.selected {
 inputbar {
     background-color: @bg;
     padding: 4;
-    border-radius: 6;
+    border-radius: 12;
     children: [prompt, entry, case-indicator];
     margin: 10 8 8 8;
 }
 
 entry {
     font: "Fira Code Regular 14";
-    text-color: white;
+    text-color: @text;
     padding: 8 12 8 12;
 }
 
 case-indicator {
     margin: 5 10 0 0;
-    text-color: white;
+    text-color: @text;
 }
 
 prompt {
     enabled: true;
     font: "Fira Code Regular 14";
-    text-color: @light-purple-solid;
+    text-color: @highlight;
     padding: 8 0 8 12;
 }
 
@@ -83,14 +83,14 @@ mode-switcher {
 }
 
 button {
-    text-color: white;
+    text-color: @text;
     background-color: @bg;
-    border-radius: 6;
+    border-radius: 12;
     padding: 6;
 }
 
 button selected {
-    background-color: @light-purple-solid;
+    background-color: @highlight;
     text-color: @bg;
 }
 

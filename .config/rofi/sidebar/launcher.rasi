@@ -11,10 +11,10 @@ window {
     location: south;
     padding: 10;
     background-color: @base;
-    border-radius: 6;
+    border-radius: 12;
     y-offset: -5%;
     border: 2px;
-    border-color: @light-purple-solid;
+    border-color: @highlight;
 }
 
 inputbar {
@@ -33,12 +33,12 @@ element {
     background-color: @bg;
     vertical-align: center;
     horizontal-align: center;
-    border-radius: 6;
+    border-radius: 12;
     padding: 9 0 0 9;
 }
 
 element-text {
-    color: white;
+    color: @text;
     background-color: transparent;
 }
 
@@ -47,9 +47,9 @@ element-text.selected {
 }
 
 element.selected {
-    background-color: @light-purple-solid;
+    background-color: @highlight;
     // border: 0 0 5 0;
-    // border-color: @light-purple-solid;
+    // border-color: @highlight;
 }
 
 /* vim:ft=css

@@ -4,8 +4,8 @@ Also features some scripts that I've written myself to make life easier
 # Software Used
 * **Terminal Emulator** Alacritty
 * **Notification Daemon** dunst
-* **Window Manager** i3-gaps
-* **Compositor** ibhagwan/picom
+* **Window Manager** bspwm
+* **Compositor** picom
 * **Menus/Launchers** rofi
 * **Bar** polybar
 
