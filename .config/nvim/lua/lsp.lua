@@ -4,48 +4,24 @@ local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
 local util = require('lspconfig/util')
 
-local path = util.path
-
-local function get_python_path(workspace)
-    -- Use activated virtualenv.
-    if vim.env.VIRTUAL_ENV then
-        return path.join(vim.env.VIRTUAL_ENV, 'bin', 'python')
-    end
-
-    -- Find and use virtualenv in workspace directory.
-    for _, pattern in ipairs({'*', '.*'}) do
-        local match = vim.fn.glob(path.join(workspace, pattern, 'pyvenv.cfg'))
-        if match ~= '' then
-            return path.join(path.dirname(match), 'bin', 'python')
+local LSPs = { 'pyright', 'rust_analyzer' }
+for _, server in ipairs(LSPs) do
+    lspconfig[server].setup {
+        capabilities = require'cmp_nvim_lsp'.default_capabilities(),
+        on_attach = function(client, bufnr) 
+            if client.server_capabilities.inlayHintProvider then
+                vim.lsp.buf.inlay_hint(bufnr, false)
+            end
         end
-    end
-
-    -- Fallback to system Python.
-    return exepath('python3') or exepath('python') or 'python'
+    }
 end
-
-lspconfig.pyright.setup {
-    before_init = function(_, config)
-        config.settings.python.pythonPath = get_python_path(config.root_dir)
-    end
-}
--- lspconfig.tsserver.setup {}
---[[
-lspconfig.rust_analyzer.setup {
-    -- Server-specific settings. See `:help lspconfig-setup`
-    settings = {
-        ['rust-analyzer'] = {},
-    },
-}
-]]
-
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+-- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

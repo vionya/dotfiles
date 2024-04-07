@@ -77,8 +77,6 @@ return require('packer').startup(function(use)
                 ts_update()
             end,
         }
-        -- LSP
-        use 'neovim/nvim-lspconfig'
         -- Rust support
         use 'rust-lang/rust.vim'
         -- code outline
@@ -89,4 +87,16 @@ return require('packer').startup(function(use)
                 require("aerial").setup()
             end,
         })
+
+        -- ** LSP AND COMPLETION **
+
+        -- LSP
+        use 'neovim/nvim-lspconfig'
+        -- CMP
+        use 'hrsh7th/nvim-cmp'
+        use 'hrsh7th/cmp-nvim-lsp'
+        use 'hrsh7th/cmp-buffer'
+        use 'hrsh7th/cmp-path'
+        use 'L3MON4D3/LuaSnip'
+        use 'saadparwaiz1/cmp_luasnip'
     end)

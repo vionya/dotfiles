@@ -2,7 +2,8 @@ require('plugins')
 require('colors')
 require('bindings')
 require('options')
--- require('lsp')
+require('completion')
+require('lsp')
 -- this is scuffed rn lol
 
 -- patch in notification replacement
