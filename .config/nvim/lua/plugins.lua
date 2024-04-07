@@ -38,6 +38,18 @@ return require('packer').startup(function(use)
         }
         -- fancy notifications
         use 'rcarriga/nvim-notify'
+        -- git UI
+        use {
+            'NeogitOrg/neogit',
+            requires = {
+                { 'nvim-lua/plenary.nvim', opt = false },
+                { 'sindrets/diffview.nvim', opt = false },
+                { 'nvim-telescope/telescope.nvim', opt = true }
+            },
+            config = function()
+                require('neogit').setup {}
+            end
+        }
         -- transparency
         --[[
         use {
