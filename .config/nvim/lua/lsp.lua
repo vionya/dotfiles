@@ -4,7 +4,7 @@ local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
 local util = require('lspconfig/util')
 
-local LSPs = { 'pyright', 'rust_analyzer' }
+local LSPs = { 'pyright', 'rust_analyzer', 'clangd' }
 for _, server in ipairs(LSPs) do
     lspconfig[server].setup {
         capabilities = require'cmp_nvim_lsp'.default_capabilities(),
