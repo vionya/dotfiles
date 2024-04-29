@@ -75,8 +75,8 @@ return require('packer').startup(function(use)
 
         -- fuzzy finder
         use {
-            'nvim-telescope/telescope.nvim', tag = '0.1.6',
-            -- or                            , branch = '0.1.x',
+            'nvim-telescope/telescope.nvim',
+            tag = '0.1.6',
             requires = { {'nvim-lua/plenary.nvim'} }
         }
         -- faster sorter code for fuzzy finder
@@ -92,13 +92,13 @@ return require('packer').startup(function(use)
         -- Rust support
         use 'rust-lang/rust.vim'
         -- code outline
-        use({
+        use {
             "stevearc/aerial.nvim",
             config = function()
                 vim.keymap.set('n', '<leader>o', '<cmd>AerialToggle!<CR>')
                 require("aerial").setup()
             end,
-        })
+        }
 
         -- ** LSP AND COMPLETION **
 
@@ -110,5 +110,6 @@ return require('packer').startup(function(use)
         use 'hrsh7th/cmp-buffer'
         use 'hrsh7th/cmp-path'
         use 'L3MON4D3/LuaSnip'
+        use 'hrsh7th/cmp-cmdline'
         use 'saadparwaiz1/cmp_luasnip'
     end)
