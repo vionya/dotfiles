@@ -23,6 +23,7 @@ vim.opt.incsearch = true
 
 -- misc
 vim.opt.laststatus = 2
+vim.g.python3_host_prog = "/usr/bin/python"
 
 -- cursorline autogroup
 local cursorlinegrp = vim.api.nvim_create_augroup('cursorlinegrp', {})
