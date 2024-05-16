@@ -1,7 +1,10 @@
 #!/bin/sh
 
+# lock the script so that only one may run at a time
+[ "${FLOCKER}" != "$0" ] && exec env FLOCKER="$0" flock -e "$0" "$0" "$@" || :
+
 # argv will always be one of '+' or '-'
-xbacklight $1 10
+xbacklight $1 10 -time 100
 
 current=$(xbacklight -get)
 dunstify -h int:value:$current -a "bright_or_vol_change" -u low "Brightness: " -r 2
