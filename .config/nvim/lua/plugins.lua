@@ -13,11 +13,6 @@ return require('packer').startup(function(use)
     -- ** UI **
 
     -- color schemes
-    use 'Shatur/neovim-ayu'
-    use "rebelot/kanagawa.nvim"
-    use { "rose-pine/neovim", as = "rose-pine" }
-    use 'soft-aesthetic/soft-era-vim'
-    use { "catppuccin/nvim", as = "catppuccin" }
     use 'junegunn/seoul256.vim'
     -- file explorer
     use {
